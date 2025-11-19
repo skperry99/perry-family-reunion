@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Perry Family Reunion 2026 – Family Memories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell">
+        <div class="site-header__inner">
+          <div class="brand">
+            <div class="brand__title">Perry Family Reunion</div>
+            <div class="brand__subtitle">Summer 2026 · St. Louis Area</div>
+          </div>
+
+          <button
+            class="nav-toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+
+          <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="our-story.html">Our Story</a>
+            <a href="weekend.html">Reunion Weekend</a>
+            <a href="travel.html">Travel &amp; Lodging</a>
+            <a href="memories.html" class="nav__link--active"
+              >Family Memories</a
+            >
+            <a href="in-memory.html">In Loving Memory</a>
+            <a href="rsvp.html" class="nav__cta">RSVP</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="shell">
+          <h1 class="section__title">Family Memories &amp; Stories</h1>
+          <p class="section__intro">
+            Over the years, our family has grown and spread out. Some of us have
+            seen each other often, some only occasionally, and some will be
+            meeting relatives for the very first time.
+          </p>
+
+          <div class="grid grid--two">
+            <article class="card">
+              <h2 class="card__title">Share a Memory</h2>
+              <p class="card__body">
+                Do you have a favorite story about growing up Perry, visiting
+                the U.P., holiday traditions, or time spent with William and
+                Irene? We’d love to collect memories to share at the reunion.
+              </p>
+              <p class="card__body">
+                You can include memories in your RSVP, or email them to the
+                organizer so they can be added to a slideshow or memory book.
+              </p>
+            </article>
+
+            <article class="card">
+              <h2 class="card__title">New Faces, Same Family</h2>
+              <p class="card__body">
+                Whether you’ve been in every family photo or are just now
+                reconnecting, you’re part of the Perry story, and you are very
+                welcome here.
+              </p>
+              <p class="card__body">
+                This reunion is meant to be a warm, low-pressure chance to say
+                hello, learn names, and start new chapters together.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell site-footer__inner">
+        <p class="site-footer__text">
+          From Cornwall &amp; Finland to the Upper Peninsula, to St. Louis and
+          beyond.
+        </p>
+        <p class="site-footer__text">
+          Perry Family Reunion · Summer 2026 · St. Louis / O’Fallon, Missouri
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const navToggle = document.querySelector(".nav-toggle");
+      const nav = document.querySelector(".nav");
+
+      if (navToggle && nav) {
+        navToggle.addEventListener("click", () => {
+          const isOpen = nav.classList.toggle("nav--open");
+          navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+      }
+    </script>
+  </body>
+</html>

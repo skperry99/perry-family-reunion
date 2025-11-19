@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Perry Family Reunion 2026 – RSVP & Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell">
+        <div class="site-header__inner">
+          <div class="brand">
+            <div class="brand__title">Perry Family Reunion</div>
+            <div class="brand__subtitle">Summer 2026 · St. Louis Area</div>
+          </div>
+
+          <button
+            class="nav-toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+
+          <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="our-story.html">Our Story</a>
+            <a href="weekend.html">Reunion Weekend</a>
+            <a href="travel.html">Travel &amp; Lodging</a>
+            <a href="memories.html">Family Memories</a>
+            <a href="in-memory.html">In Loving Memory</a>
+            <a href="rsvp.html" class="nav__cta nav__link--active">RSVP</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="shell">
+          <h1 class="section__title">RSVP &amp; Stay in Touch</h1>
+          <p class="section__intro">
+            To help with planning food, space, and activities, please let us
+            know if you’re hoping to attend – even if you’re not yet sure which
+            weekend will work best.
+          </p>
+
+          <div class="grid grid--two">
+            <article class="card">
+              <h2 class="card__title">RSVP Online</h2>
+              <p class="card__body">
+                We’re using a simple online form to collect RSVPs and contact
+                information.
+              </p>
+
+              <p class="card__body">
+                <strong>Link to the form:</strong><br />
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSeoXJ50WyCdjGXBHA55PsqNiWxE6j55Ch4WmUYq_qM18rsTLA/viewform?usp=dialog"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Click here to fill out the Perry Family Reunion survey
+                </a>
+              </p>
+
+              <div class="form-embed">
+                <iframe
+                  src="https://docs.google.com/forms/d/e/1FAIpQLSeoXJ50WyCdjGXBHA55PsqNiWxE6j55Ch4WmUYq_qM18rsTLA/viewform?embedded=true"
+                  width="100%"
+                  height="900"
+                  frameborder="0"
+                  marginheight="0"
+                  marginwidth="0"
+                >
+                  Loading…
+                </iframe>
+              </div>
+            </article>
+
+            <article class="card">
+              <h2 class="card__title">Contact the Organizer</h2>
+              <p class="card__body">
+                Have questions, ideas, or special circumstances you’d like to
+                talk through? Please reach out:
+              </p>
+              <p class="card__body">
+                <strong>Organizer:</strong><br />
+                <span>Sarah</span><br />
+                <a href="mailto:skat1403@gmail.com">skat1403@gmail.com</a>
+              </p>
+              <p class="card__body">
+                If you’re reconnecting after a long time, or meeting the family
+                for the first time, and you’re feeling nervous – you’re not
+                alone. You are welcome and wanted here.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell site-footer__inner">
+        <p class="site-footer__text">
+          From Cornwall &amp; Finland to the Upper Peninsula, to St. Louis and
+          beyond.
+        </p>
+        <p class="site-footer__text">
+          Perry Family Reunion · Summer 2026 · St. Louis / O’Fallon, Missouri
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const navToggle = document.querySelector(".nav-toggle");
+      const nav = document.querySelector(".nav");
+
+      if (navToggle && nav) {
+        navToggle.addEventListener("click", () => {
+          const isOpen = nav.classList.toggle("nav--open");
+          navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+      }
+    </script>
+  </body>
+</html>
