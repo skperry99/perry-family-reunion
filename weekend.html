@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Perry Family Reunion 2026 – Reunion Weekend</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell">
+        <div class="site-header__inner">
+          <div class="brand">
+            <div class="brand__title">Perry Family Reunion</div>
+            <div class="brand__subtitle">Summer 2026 · St. Louis Area</div>
+          </div>
+
+          <button
+            class="nav-toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+
+          <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="our-story.html">Our Story</a>
+            <a href="weekend.html" class="nav__link--active">Reunion Weekend</a>
+            <a href="travel.html">Travel &amp; Lodging</a>
+            <a href="memories.html">Family Memories</a>
+            <a href="in-memory.html">In Loving Memory</a>
+            <a href="rsvp.html" class="nav__cta">RSVP</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="shell">
+          <h1 class="section__title">Reunion Weekend – Summer 2026</h1>
+          <p class="section__intro">
+            The final schedule will be shared closer to the date, but here’s the
+            general shape of the weekend we’re planning around the St. Louis /
+            O’Fallon area.
+          </p>
+
+          <div class="grid grid--three">
+            <article class="card">
+              <h2 class="card__title">Friday · Welcome Evening</h2>
+              <ul class="card__list">
+                <li>Casual meet-and-greet</li>
+                <li>Snacks and visiting</li>
+                <li>Name tags &amp; “Who’s who?” introductions</li>
+                <li>Old photos and stories from the U.P.</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h2 class="card__title">Saturday · Main Reunion Day</h2>
+              <ul class="card__list">
+                <li>Group lunch or BBQ</li>
+                <li>Family photos by branch and generation</li>
+                <li>Kids’ activities and outdoor time</li>
+                <li>Story circle: “Growing Up Perry”</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h2 class="card__title">Sunday · Farewell &amp; Free Time</h2>
+              <ul class="card__list">
+                <li>Optional brunch</li>
+                <li>Time for St. Louis sightseeing</li>
+                <li>Relaxed visiting and goodbyes</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="callout">
+            <h3 class="callout__title">Celebration of Life</h3>
+            <p class="callout__body">
+              During the reunion, we will set aside time for a
+              <strong>Celebration of Life</strong> to honor and remember a
+              beloved son, brother, and uncle who passed away in 2025, as well
+              as other family members we’ve lost over the years.
+            </p>
+            <p class="callout__body">
+              This will be a space to share stories, photos, and memories, and
+              to support one another as a family.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell site-footer__inner">
+        <p class="site-footer__text">
+          From Cornwall &amp; Finland to the Upper Peninsula, to St. Louis and
+          beyond.
+        </p>
+        <p class="site-footer__text">
+          Perry Family Reunion · Summer 2026 · St. Louis / O’Fallon, Missouri
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const navToggle = document.querySelector(".nav-toggle");
+      const nav = document.querySelector(".nav");
+
+      if (navToggle && nav) {
+        navToggle.addEventListener("click", () => {
+          const isOpen = nav.classList.toggle("nav--open");
+          navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Perry Family Reunion 2026 – Our Story</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell">
+        <div class="site-header__inner">
+          <div class="brand">
+            <div class="brand__title">Perry Family Reunion</div>
+            <div class="brand__subtitle">Summer 2026 · St. Louis Area</div>
+          </div>
+
+          <button
+            class="nav-toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+
+          <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="our-story.html" class="nav__link--active">Our Story</a>
+            <a href="weekend.html">Reunion Weekend</a>
+            <a href="travel.html">Travel &amp; Lodging</a>
+            <a href="memories.html">Family Memories</a>
+            <a href="in-memory.html">In Loving Memory</a>
+            <a href="rsvp.html" class="nav__cta">RSVP</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section section--alt">
+        <div class="shell">
+          <h1 class="section__title">Our Story</h1>
+          <p class="section__intro">
+            The Perry family story begins with two families who journeyed from
+            Europe to Michigan’s Upper Peninsula – and continues across
+            generations, states, and even continents.
+          </p>
+
+          <div class="grid grid--two">
+            <article class="card">
+              <h2 class="card__title">Roots in Cornwall &amp; Finland</h2>
+              <p class="card__body">
+                William Henry Perry Sr. was the son of Cornish immigrants who
+                came to the U.P. seeking work and opportunity. Irene Marie
+                (Hakala) Perry was the daughter of Finnish immigrants who also
+                made their home in Michigan.
+              </p>
+              <p class="card__body">
+                Together, William and Irene raised
+                <strong>nine children</strong> between 1939 and 1952, most of
+                whom, along with many grandchildren, spent their early years in
+                Michigan.
+              </p>
+            </article>
+
+            <article class="card">
+              <h2 class="card__title">From the U.P. to Everywhere</h2>
+              <p class="card__body">
+                Over time, work, school, and family led the Perry descendants
+                far beyond Michigan – including Missouri and overseas. Today our
+                family includes children, grandchildren, great-grandchildren,
+                and great-great-grandsons who live in different states and
+                countries.
+              </p>
+              <p class="card__body">
+                This reunion is a chance to reconnect, put faces to names, and
+                introduce the newest branches of the family tree – including
+                little ones and relatives some of us may be meeting for the very
+                first time.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell site-footer__inner">
+        <p class="site-footer__text">
+          From Cornwall &amp; Finland to the Upper Peninsula, to St. Louis and
+          beyond.
+        </p>
+        <p class="site-footer__text">
+          Perry Family Reunion · Summer 2026 · St. Louis / O’Fallon, Missouri
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const navToggle = document.querySelector(".nav-toggle");
+      const nav = document.querySelector(".nav");
+
+      if (navToggle && nav) {
+        navToggle.addEventListener("click", () => {
+          const isOpen = nav.classList.toggle("nav--open");
+          navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+      }
+    </script>
+  </body>
+</html>

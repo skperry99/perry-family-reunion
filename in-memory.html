@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Perry Family Reunion 2026 – In Loving Memory</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell">
+        <div class="site-header__inner">
+          <div class="brand">
+            <div class="brand__title">Perry Family Reunion</div>
+            <div class="brand__subtitle">Summer 2026 · St. Louis Area</div>
+          </div>
+
+          <button
+            class="nav-toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+
+          <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="our-story.html">Our Story</a>
+            <a href="weekend.html">Reunion Weekend</a>
+            <a href="travel.html">Travel &amp; Lodging</a>
+            <a href="memories.html">Family Memories</a>
+            <a href="in-memory.html" class="nav__link--active"
+              >In Loving Memory</a
+            >
+            <a href="rsvp.html" class="nav__cta">RSVP</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section section--alt">
+        <div class="shell">
+          <h1 class="section__title">In Loving Memory</h1>
+          <p class="section__intro">
+            As we gather for the first Perry Family Reunion, we also hold close
+            the family members who are no longer with us. Their stories, humor,
+            hard work, and love helped shape who we are today.
+          </p>
+
+          <div class="card card--center">
+            <p class="card__body">
+              This page is a small way to honor them. During the reunion, we’ll
+              have additional space to share memories, photos, and stories
+              together.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell">
+          <div class="grid grid--two">
+            <article class="card">
+              <h2 class="card__title">Irja “Irene” M. (Hakala) Perry</h2>
+              <p class="card__body">
+                Irja “Irene” Marie Hakala Perry was born on
+                <strong>February 4, 1911</strong> in Michigan’s Upper Peninsula,
+                the daughter of Finnish immigrants Jacob and Maria (Oja) Hakala.
+                She married <strong>William Henry Perry</strong> in October
+                1939, and together they raised nine children and built a life
+                rooted in faith, family, and hard work in the U.P.
+              </p>
+              <p class="card__body">
+                Irene lived a long life, passing away at the age of 95 on March
+                30, 2006, surrounded by family. The values she carried from her
+                Finnish upbringing—perseverance, hospitality, and quiet
+                strength—still ripple through her children, grandchildren, and
+                great-grandchildren.
+              </p>
+              <p class="card__body">
+                At the reunion, we remember her as “Mom,” “Grandma,” and
+                “Great-Grandma Irene,” whose kitchen, stories, and hugs were at
+                the center of so many early Perry memories.
+              </p>
+            </article>
+
+            <article class="card">
+              <h2 class="card__title">John Alan Perry</h2>
+              <p class="card__body">
+                <strong>John Alan Perry</strong>, one of William and Irene’s
+                sons, was born on <strong>November 28, 1942</strong>, in
+                Michigan’s Upper Peninsula. He passed away on
+                <strong>September 20, 2025</strong>, at the age of 82, in
+                Maryland Heights, Missouri.
+              </p>
+              <p class="card__body">
+                John was a son, brother, dad, grandpa, and friend. For many of
+                us, he is remembered for his wit, his stories, and the way he
+                could fill a room with conversation. His life connected the U.P.
+                roots of the Perry family to later chapters in Illinois and
+                Missouri, and to children and grandchildren who carry his memory
+                forward.
+              </p>
+              <p class="card__body">
+                During the reunion weekend, we will set aside time for a
+                <strong>Celebration of Life</strong> in John’s honor, along with
+                time to remember other loved ones who have passed. This will be
+                a space for stories, photos, and quiet moments of gratitude.
+              </p>
+            </article>
+          </div>
+
+          <div class="callout">
+            <h3 class="callout__title">Remembering Others</h3>
+            <p class="callout__body">
+              In addition to John and Irene, four of the nine Perry children and
+              many other relatives have passed away over the years. Each of
+              them—parents, siblings, cousins, spouses, and friends—has left an
+              imprint on our family.
+            </p>
+            <p class="callout__body">
+              If you would like someone mentioned by name, or if you have a
+              favorite photo you’d like included in a slideshow or memory table,
+              please reach out to the reunion organizer before the weekend.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell site-footer__inner">
+        <p class="site-footer__text">
+          From Cornwall &amp; Finland to the Upper Peninsula, to St. Louis and
+          beyond.
+        </p>
+        <p class="site-footer__text">
+          Perry Family Reunion · Summer 2026 · St. Louis / O’Fallon, Missouri
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const navToggle = document.querySelector(".nav-toggle");
+      const nav = document.querySelector(".nav");
+
+      if (navToggle && nav) {
+        navToggle.addEventListener("click", () => {
+          const isOpen = nav.classList.toggle("nav--open");
+          navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+      }
+    </script>
+  </body>
+</html>
