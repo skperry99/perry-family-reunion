@@ -462,3 +462,11 @@ body {
     padding: 2.5rem 0 2rem;
   }
 }
+
+.family-tree-grid .card__title {
+  margin-bottom: 0.6rem;
+}
+
+.family-tree-grid .card__list {
+  margin-bottom: 0.5rem;
+}
