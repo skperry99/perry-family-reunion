@@ -8,9 +8,7 @@ The site is meant to be warm, easy to read, and shareable with family members of
 
 ## Live Site
 
-(Replace this with your actual URL once deployed.)
-
-- GitHub Pages: `https://<username>.github.io/perry-family-reunion/`
+- GitHub Pages: `https://skperry99.github.io/perry-family-reunion/index.html`
 
 ---
 
