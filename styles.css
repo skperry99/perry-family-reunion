@@ -141,6 +141,13 @@ body {
   color: #fff7ed;
 }
 
+/* If the CTA is the current page, give it a slightly stronger look */
+.nav__cta[aria-current="page"] {
+  background-color: #f97316; /* a touch brighter than var(--accent-warm) */
+  color: #fff7ed;
+  border-color: rgba(15, 23, 42, 0.25);
+}
+
 /* Active (current) page link: underline instead of a filled pill */
 .nav__link--active {
   color: #fefce8;
@@ -167,6 +174,17 @@ body {
   font-size: 1.6rem;
   cursor: pointer;
   color: #f9fafb;
+}
+
+/* ---------------
+   Focus styles (accessibility)
+   --------------- */
+
+.nav a:focus-visible,
+.btn:focus-visible,
+.nav-toggle:focus-visible {
+  outline: 2px solid #facc15; /* warm golden outline */
+  outline-offset: 3px;
 }
 
 /* ---------------
@@ -409,11 +427,33 @@ body {
 }
 
 /* ---------------
+   Our Story – decorative accent
+   --------------- */
+
+.our-story-page .section--alt {
+  position: relative;
+}
+
+/* Soft patterned band at the top of the Our Story intro section */
+.our-story-page .section--alt::before {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 6px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(22, 101, 52, 0.35) 0 16px,
+    rgba(194, 65, 12, 0.28) 16px 32px
+  );
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+/* ---------------
    In Loving Memory page
    --------------- */
 
-/* works whether in-memory-page is on <main> or directly on the section */
-.in-memory-page.section--alt,
 .in-memory-page .section--alt {
   background: radial-gradient(circle at top, #fff7ed, transparent 55%),
     radial-gradient(circle at bottom, #ecfdf5, transparent 55%),
@@ -569,4 +609,19 @@ body {
   .hero {
     padding: 2.5rem 0 2rem;
   }
+}
+
+@media (max-width: 800px) {
+  .card {
+    padding: 1rem 1.1rem;
+  }
+
+  .section__title {
+    font-size: 1.45rem;
+  }
+}
+
+.form-embed iframe {
+  width: 100%;
+  display: block;
 }
