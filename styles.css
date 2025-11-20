@@ -387,6 +387,54 @@ body {
 }
 
 /* ---------------
+   In Loving Memory page
+   --------------- */
+
+.in-memory-page .section--alt {
+  background: radial-gradient(circle at top, #fff7ed, transparent 55%),
+    radial-gradient(circle at bottom, #ecfdf5, transparent 55%),
+    linear-gradient(180deg, #fdfaf6, #fff7ed);
+}
+
+.in-memory-page .section__title {
+  letter-spacing: 0.04em;
+}
+
+.in-memory-page .card--memory {
+  position: relative;
+  border-left: 4px solid var(--accent-warm);
+  overflow: hidden;
+}
+
+.in-memory-page .card--memory::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top left,
+    rgba(249, 115, 22, 0.06),
+    transparent 55%
+  );
+  pointer-events: none;
+}
+
+.in-memory-page .card--memory .card__title {
+  position: relative;
+  color: var(--accent-strong);
+}
+
+.in-memory-page .card--memory .card__body {
+  position: relative;
+}
+
+.section__subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--accent-strong);
+  margin: 2rem 0 1.25rem;
+}
+
+/* ---------------
    Footer
    --------------- */
 
