@@ -535,6 +535,89 @@ body {
 }
 
 /* ---------------
+   Family Roots page
+   --------------- */
+
+.family-roots-page .family-branch {
+  margin-bottom: var(--space-xl);
+}
+
+/* Compact timeline styling at top of each branch */
+.family-roots-page .family-branch > .card__list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 1.5rem;
+  border-left: 3px solid rgba(22, 101, 52, 0.18); /* soft accent green */
+  padding-inline-start: 1.1rem; /* space between border and text */
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.family-roots-page .family-branch > .card__list li {
+  position: relative;
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+}
+
+/* Little dot for each timeline entry */
+.family-roots-page .family-branch > .card__list li::before {
+  content: "";
+  position: absolute;
+  left: -1.1rem;
+  top: 0.45em;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: var(--accent);
+  opacity: 0.6;
+}
+
+/* “Back to top / Our Story” nav under each section */
+.family-roots-page .family-nav {
+  margin-top: 2rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--card-border);
+  font-size: 0.9rem;
+  text-align: right;
+  color: var(--muted);
+}
+
+.family-roots-page .family-nav a {
+  text-decoration: none;
+  color: var(--accent-strong);
+}
+
+.family-roots-page .family-nav a:hover,
+.family-roots-page .family-nav a:focus {
+  text-decoration: underline;
+  color: var(--accent-warm);
+}
+
+/* Slight tighten on long paragraphs for readability on wide screens */
+.family-roots-page .family-branch p {
+  max-width: 48rem;
+}
+
+.family-roots-page .section--alt {
+  position: relative;
+}
+
+.family-roots-page .section--alt::before {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 6px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(22, 101, 52, 0.35) 0 16px,
+    rgba(194, 65, 12, 0.28) 16px 32px
+  );
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+/* ---------------
    Footer
    --------------- */
 
