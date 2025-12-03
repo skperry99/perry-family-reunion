@@ -638,6 +638,64 @@ body {
 }
 
 /* ---------------
+   Skip link (accessibility)
+   --------------- */
+
+.skip-link {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  background: #ffffff;
+  color: var(--accent-strong);
+  border-radius: 999px;
+  border: 1px solid var(--card-border);
+  transform: translateY(-150%);
+  transition: transform 0.15s ease;
+  z-index: 50;
+  font-size: 0.9rem;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* ---------------
+   Page headers (top section on inner pages)
+   --------------- */
+
+.page-header {
+  position: relative;
+  padding-top: calc(var(--space-xl) * 1.05);
+  padding-bottom: var(--space-lg);
+}
+
+/* Decorative underline on page title */
+.page-header .section__title {
+  position: relative;
+}
+
+.page-header .section__title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  margin: 0.75rem auto 0;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    var(--accent),
+    var(--accent-warm)
+  );
+  opacity: 0.85;
+}
+
+/* Slightly tighter intro spacing on page headers */
+.page-header .section__intro {
+  margin-bottom: var(--space-md);
+}
+
+/* ---------------
    Responsive
    --------------- */
 
