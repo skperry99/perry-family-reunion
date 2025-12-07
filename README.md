@@ -127,3 +127,13 @@ If family members spot details that should be updated (names, dates, locations),
 * RSVP & coordination: via Google Forms and email
 
 > From Cornwall & Finland to the Upper Peninsula, to St. Louis and beyond.
+
+---
+
+## License
+
+- The **site code** (HTML, CSS, and any JavaScript used for layout or navigation) is licensed under the MIT License.  
+  See the [LICENSE](./LICENSE) file for full details.
+
+- The **site content** — including family stories, names, dates, images, and genealogical notes — is © 2025 Sarah Perry and the descendants of William Henry Perry Sr. and Irene “Irja” Marie (Hakala) Perry.  
+  This content is shared for family use only; please do not copy, repost, or reuse it publicly without permission.
