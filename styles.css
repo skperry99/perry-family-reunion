@@ -682,11 +682,7 @@ body {
   height: 3px;
   margin: 0.75rem auto 0;
   border-radius: 999px;
-  background: linear-gradient(
-    to right,
-    var(--accent),
-    var(--accent-warm)
-  );
+  background: linear-gradient(to right, var(--accent), var(--accent-warm));
   opacity: 0.85;
 }
 
