@@ -130,10 +130,13 @@ If family members spot details that should be updated (names, dates, locations),
 
 ---
 
-## License
+## Family use & sharing
 
-- The **site code** (HTML, CSS, and any JavaScript used for layout or navigation) is licensed under the MIT License.  
-  See the [LICENSE](./LICENSE) file for full details.
+This site is a little home on the web for the Perry family and our relatives.
 
-- The **site content** — including family stories, names, dates, images, and genealogical notes — is © 2025 Sarah Perry and the descendants of William Henry Perry Sr. and Irene “Irja” Marie (Hakala) Perry.  
-  This content is shared for family use only; please do not copy, repost, or reuse it publicly without permission.
+- The **behind-the-scenes code** (HTML, CSS, and any JavaScript) is shared under the MIT License.  
+  That just means other people are free to reuse the structure of the site if they’d like. If you’re curious, the full text is in the [LICENSE](./LICENSE) file.
+
+- The **stories, photos, and family details** on this site are meant for our family.  
+  Please treat them as personal family history – feel free to share them with relatives, but please don’t repost them publicly or use them in other projects without checking with the family first.
+
