@@ -738,6 +738,13 @@ body {
   }
 }
 
+.form-embed iframe {
+  width: 100%;
+  display: block;
+  height: clamp(720px, 85vh, 1100px);
+  border: 0;
+}
+
 @media (max-width: 480px) {
   .section {
     padding: 2.25rem 0;
@@ -745,6 +752,9 @@ body {
 
   .hero {
     padding: 2.5rem 0 2rem;
+  }
+  .form-embed iframe {
+    height: clamp(680px, 78vh, 950px);
   }
 }
 
@@ -756,9 +766,4 @@ body {
   .section__title {
     font-size: 1.45rem;
   }
-}
-
-.form-embed iframe {
-  width: 100%;
-  display: block;
 }
