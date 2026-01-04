@@ -4,9 +4,15 @@
     <meta charset="UTF-8" />
     <title>Perry Family Reunion 2026 – Our Story</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="High-level Perry family story – William and Irene Perry’s roots in Michigan’s Upper Peninsula, Cornwall, and Finland, and how the family spread across states and generations."
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div id="top"></div>
     <header class="site-header">
       <div class="shell">
         <div class="site-header__inner">
@@ -22,16 +28,14 @@
           >
             ☰
           </button>
-
-          <nav class="nav">
+          <nav class="nav" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a
               href="our-story.html"
               class="nav__link--active"
               aria-current="page"
+              >Our Story</a
             >
-              Our Story
-            </a>
             <a href="weekend.html">Reunion Weekend</a>
             <a href="travel.html">Travel &amp; Lodging</a>
             <a href="memories.html">Family Memories</a>
@@ -42,8 +46,8 @@
       </div>
     </header>
 
-    <main class="our-story-page">
-      <section class="section section--alt">
+    <main id="main-content" class="our-story-page">
+      <section class="section section--alt page-header">
         <div class="shell">
           <h1 class="section__title">Our Story</h1>
           <p class="section__intro">
@@ -65,6 +69,12 @@
                 Together, William and Irene raised
                 <strong>nine children</strong> in Michigan. Many of those
                 children then raised their own families there as well.
+              </p>
+              <!-- NEW: pointer to the full family roots page -->
+              <p class="card__body">
+                You can read more about the earlier generations behind William
+                and Irene on the
+                <a href="family-roots.html">Family Roots</a> page.
               </p>
             </article>
 
@@ -178,6 +188,54 @@
           </div>
         </div>
       </section>
+
+      <!-- NEW: short “Earlier Generations” teaser section -->
+      <section class="section section--alt">
+        <div class="shell">
+          <h2 class="section__title">Earlier Generations</h2>
+          <p class="section__intro">
+            Behind William and Irene are parents and grandparents who crossed
+            oceans, moved for mine and farm work, and helped shape the family
+            we’re part of today.
+          </p>
+
+          <div class="grid grid--two">
+            <article class="card">
+              <h3 class="card__title">Perry Side</h3>
+              <p class="card__body">
+                On William’s side, the story starts with
+                <strong>Andrew Stevens Perry</strong> and
+                <strong>Annie (Perry) Perry</strong>. Andrew was born in Lelant,
+                Cornwall, and came to the U.S. as a teenager, working first in
+                Pennsylvania coal country and later in the iron mines of
+                Michigan and Wisconsin. Annie was born in Carmel, New York, and
+                grew up in Crystal Falls, Michigan. Together they raised their
+                family in mining locations across the Upper Peninsula.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3 class="card__title">Hakala &amp; Oja Side</h3>
+              <p class="card__body">
+                On Irene’s side, our Finnish roots come from
+                <strong>Jacob Nestor Hakala</strong> and
+                <strong>Maria Eliina (Oja) Hakala</strong>. Jacob was born in
+                Kauhajoki, Finland, and Maria in Finland as well, before their
+                families settled in the Princeton and Forsyth Township area of
+                Marquette County. They combined small farms with iron-mine work
+                along Highway M-35 and raised a large family of Hakala children
+                who carried Finnish traditions into the next generation.
+              </p>
+            </article>
+          </div>
+
+          <p class="section__intro" style="margin-top: 1.5rem">
+            For a more detailed look at these earlier generations – including
+            timelines, places, and photos – visit the
+            <a href="family-roots.html">Family Roots</a> page.
+          </p>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
@@ -188,6 +246,11 @@
         </p>
         <p class="site-footer__text">
           Perry Family Reunion · Summer 2026 · St. Louis / O’Fallon, Missouri
+        </p>
+        <p class="site-footer__text">
+          Built by Sarah Perry for the Perry family. The site code is shared
+          under a simple open-source license; our stories and photos are just
+          for family.
         </p>
       </div>
     </footer>

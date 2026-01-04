@@ -6,13 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content='1st Perry Family Reunion in the St. Louis
-    / O’Fallon, Missouri area – celebrating the descendants of William Henry
-    Perry Sr. and Irene "Irja" Marie (Hakala) Perry.'
+      content='1st Perry Family Reunion in the St. Louis / O’Fallon, Missouri area – celebrating the descendants of William Henry Perry Sr. and Irene "Irja" Marie (Hakala) Perry.'
     />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Perry Family Reunion 2026 – St. Louis / O’Fallon, Missouri"
+    />
+    <meta
+      property="og:description"
+      content="From Cornwall & Finland to the Upper Peninsula – four generations of the Perry family gathering in the St. Louis / O’Fallon area in summer 2026."
+    />
+    <meta
+      property="og:url"
+      content="https://skperry99.github.io/perry-family-reunion/"
+    />
+    <meta
+      property="og:image"
+      content="https://skperry99.github.io/perry-family-reunion/img/perry-family-reunion-card.png"
+    />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Perry Family Reunion 2026 – St. Louis / O’Fallon, Missouri"
+    />
+    <meta
+      name="twitter:description"
+      content="From Cornwall & Finland to the Upper Peninsula – four generations of the Perry family gathering in the St. Louis / O’Fallon area in summer 2026."
+    />
+    <meta
+      name="twitter:image"
+      content="https://skperry99.github.io/perry-family-reunion/img/perry-family-reunion-card.png"
+    />
+
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div id="top"></div>
     <header class="site-header">
       <div class="shell">
         <div class="site-header__inner">
@@ -29,8 +64,10 @@
             ☰
           </button>
 
-          <nav class="nav">
-            <a href="index.html" class="nav__link--active">Home</a>
+          <nav class="nav" aria-label="Main navigation">
+            <a href="index.html" class="nav__link--active" aria-current="page"
+              >Home</a
+            >
             <a href="our-story.html">Our Story</a>
             <a href="weekend.html">Reunion Weekend</a>
             <a href="travel.html">Travel &amp; Lodging</a>
@@ -42,7 +79,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content" class="home-page">
       <section class="hero">
         <div class="shell hero__inner">
           <div class="hero__text">
@@ -53,10 +90,10 @@
             <p class="hero__body">
               In summer 2026, the children, grandchildren, great-grandchildren,
               and great-great-grandchildren of
-              <strong>William Henry</strong> and
-              <strong>Irene "Irja" Marie Perry Sr.</strong> will gather in the St.
-              Louis / O’Fallon, Missouri area to reconnect, remember, and make
-              new memories.
+              <strong>William Henry Perry Sr.</strong> and
+              <strong>Irene "Irja" Marie (Hakala) Perry</strong> will gather in
+              the St. Louis / O’Fallon, Missouri area to reconnect, remember,
+              and make new memories.
             </p>
             <p class="hero__body">
               Dates are still being finalized (likely Father’s Day weekend or
@@ -150,6 +187,11 @@
         </p>
         <p class="site-footer__text">
           Perry Family Reunion · Summer 2026 · St. Louis / O’Fallon, Missouri
+        </p>
+        <p class="site-footer__text">
+          Built by Sarah Perry for the Perry family. The site code is shared
+          under a simple open-source license; our stories and photos are just
+          for family.
         </p>
       </div>
     </footer>
