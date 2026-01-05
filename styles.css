@@ -1,49 +1,54 @@
-/* ---------------
-   Base & Theme
-   --------------- */
+/* =========================================================
+   Perry Family Reunion 2026
+   Stylesheet (cleaned + organized)
+   Vibe: Warm heritage / scrapbook, modern readability
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   1) Theme tokens + base reset
+   --------------------------------------------------------- */
 
 :root {
-  --bg: #fefaf5;
-  --bg-alt: #fff7ed;
+  /* Backgrounds */
+  --bg: #fefaf5; /* warm cream */
+  --bg-alt: #fff7ed; /* warm light peach */
 
-  --text: #111827;
-  --muted: #525a67;
+  /* Text */
+  --text: #111827; /* near-black ink */
+  --muted: #525a67; /* soft ink for paragraphs */
 
-  /* Deep green as main accent */
-  --accent: #166534;
-  --accent-soft: #e4f3e6;
+  /* Accents */
+  --accent: #166534; /* deep green */
   --accent-strong: #14532d;
+  --accent-soft: #e4f3e6;
 
-  /* Warm rust/orange accent */
-  --accent-warm: #c2410c;
+  --accent-warm: #c2410c; /* warm rust */
   --accent-warm-soft: #fff7ed;
 
+  /* Surfaces */
   --card-bg: #ffffff;
   --card-border: #e5e7eb;
 
+  /* Layout + shape */
   --shell-width: 960px;
   --radius-lg: 18px;
   --radius-md: 12px;
   --shadow-soft: 0 14px 40px rgba(15, 23, 42, 0.12);
 
+  /* Spacing scale */
   --space-xs: 0.5rem;
   --space-sm: 0.75rem;
   --space-md: 1.25rem;
   --space-lg: 2rem;
   --space-xl: 3rem;
 
-  --highlight: #fff1dd; /* warm parchment */
-  --highlight-border: rgba(194, 65, 12, 0.22);
-  --paper: #fefaf5; /* your bg */
-  --paper-alt: #fff7ed; /* your bg-alt */
-  --ink: #111827; /* your text */
-  --ink-soft: #525a67; /* slightly deeper than #6b7280 for cream backgrounds */
-
-  --serif: "Source Serif 4", ui-serif, Georgia, "Times New Roman", Times, serif;
-  --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-
+  /* Heritage highlight (“parchment”) */
   --parchment: #fff1dd;
   --parchment-border: rgba(194, 65, 12, 0.22);
+
+  /* Typography */
+  --serif: "Source Serif 4", ui-serif, Georgia, "Times New Roman", Times, serif;
+  --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 *,
@@ -62,13 +67,22 @@ body {
   font-family: var(--sans);
   font-size: 16px;
   line-height: 1.65;
-  color: var(--ink);
-  background: var(--paper);
+  color: var(--text);
+  background: var(--bg);
 }
 
-/* ---------------
-   Shell / Container
-   --------------- */
+/* Links */
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  color: var(--accent-warm);
+}
+
+/* ---------------------------------------------------------
+   2) Shell / container
+   --------------------------------------------------------- */
 
 .shell {
   width: 100%;
@@ -77,9 +91,9 @@ body {
   padding: 0 1rem;
 }
 
-/* ---------------
-   Header & Nav
-   --------------- */
+/* ---------------------------------------------------------
+   3) Header & navigation
+   --------------------------------------------------------- */
 
 .site-header {
   position: sticky;
@@ -102,42 +116,22 @@ body {
   padding: 0.85rem 0;
 }
 
-.brand__title,
-.section__title,
-.card__title {
-  font-family: var(--serif);
-  letter-spacing: 0.01em;
-}
-
 .brand__title {
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 
 .brand__subtitle {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   line-height: 1.25;
   opacity: 0.9;
 }
 
-.section__title {
-  font-weight: 700;
-  font-size: clamp(1.7rem, 2.4vw, 2.15rem);
-}
-
-.section__intro,
-.card__body,
-.card__list {
-  color: var(--ink-soft);
-  font-size: 1rem;
-}
-
-/* nav */
-
+/* Nav */
 .nav {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.75rem; /* single source of spacing */
 }
 
 .nav a {
@@ -146,12 +140,7 @@ body {
   text-decoration: none;
   color: #f9fafb;
   padding: 0.3rem 0.2rem;
-  border-radius: 0;
   transition: color 0.15s ease, transform 0.05s ease;
-}
-
-.nav a + a {
-  margin-left: 0.8rem;
 }
 
 .nav a:hover {
@@ -159,6 +148,7 @@ body {
   transform: translateY(-1px);
 }
 
+/* CTA link */
 .nav__cta {
   margin-left: 1.25rem;
   padding: 0.4rem 0.95rem;
@@ -174,14 +164,14 @@ body {
   color: #fff7ed;
 }
 
-/* If the CTA is the current page, give it a slightly stronger look */
+/* CTA current page */
 .nav__cta[aria-current="page"] {
-  background-color: #f97316; /* a touch brighter than var(--accent-warm) */
+  background-color: #f97316;
   color: #fff7ed;
   border-color: rgba(15, 23, 42, 0.25);
 }
 
-/* Active (current) page link: underline instead of a filled pill */
+/* Optional underline style if you ever use nav__link--active */
 .nav__link--active {
   color: #fefce8;
   font-weight: 600;
@@ -194,12 +184,11 @@ body {
   right: 0;
   bottom: -0.25rem;
   height: 2px;
-  background-color: #facc15; /* warm golden underline */
+  background-color: #facc15;
   border-radius: 999px;
 }
 
-/* Mobile nav toggle */
-
+/* Mobile nav toggle button */
 .nav-toggle {
   display: none;
   border: none;
@@ -209,20 +198,54 @@ body {
   color: #f9fafb;
 }
 
-/* ---------------
-   Focus styles (accessibility)
-   --------------- */
-
+/* Focus styles (accessibility) */
 .nav a:focus-visible,
 .btn:focus-visible,
 .nav-toggle:focus-visible {
-  outline: 2px solid #facc15; /* warm golden outline */
+  outline: 2px solid #facc15;
   outline-offset: 3px;
 }
 
-/* ---------------
-   Hero
-   --------------- */
+/* ---------------------------------------------------------
+   4) Typography (heritage starter mode)
+   Serif ONLY on big titles
+   --------------------------------------------------------- */
+
+.hero__title,
+.section__title {
+  font-family: var(--serif);
+  letter-spacing: 0.01em;
+}
+
+.section__title {
+  text-align: center;
+  margin: 0 0 var(--space-sm);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 2.2vw, 2rem);
+}
+
+.section__intro {
+  max-width: 44rem;
+  margin: 0 auto var(--space-lg);
+  text-align: center;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.card__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+}
+
+.card__body,
+.card__list {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* ---------------------------------------------------------
+   5) Hero
+   --------------------------------------------------------- */
 
 .hero {
   padding: var(--space-xl) 0 var(--space-lg);
@@ -306,38 +329,32 @@ body {
   position: relative;
 }
 
-/* ---------------
-   Sections
-   --------------- */
+/* ---------------------------------------------------------
+   6) Sections
+   --------------------------------------------------------- */
 
 .section {
   padding: var(--space-xl) 0;
 }
 
+/* Heritage “paper” alt background (single source of truth) */
 .section--alt {
-  background: linear-gradient(
-    135deg,
-    rgba(236, 253, 245, 0.95),
-    rgba(255, 243, 230, 0.9)
-  );
+  background: radial-gradient(
+      circle at top left,
+      rgba(22, 101, 52, 0.06),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(194, 65, 12, 0.06),
+      transparent 55%
+    ),
+    linear-gradient(to bottom, #fdfaf6, var(--bg-alt));
 }
 
-.section__title {
-  text-align: center;
-  margin: 0 0 var(--space-sm);
-  font-size: 1.7rem;
-}
-
-.section__intro {
-  max-width: 44rem;
-  margin: 0 auto var(--space-lg);
-  text-align: center;
-  color: var(--muted);
-}
-
-/* ---------------
-   Buttons
-   --------------- */
+/* ---------------------------------------------------------
+   7) Buttons
+   --------------------------------------------------------- */
 
 .btn {
   display: inline-flex;
@@ -374,9 +391,9 @@ body {
   transform: none;
 }
 
-/* ---------------
-   Grid
-   --------------- */
+/* ---------------------------------------------------------
+   8) Grid
+   --------------------------------------------------------- */
 
 .grid {
   display: grid;
@@ -391,9 +408,9 @@ body {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-/* ---------------
-   Cards & Callouts
-   --------------- */
+/* ---------------------------------------------------------
+   9) Cards & callouts
+   --------------------------------------------------------- */
 
 .card {
   background-color: var(--card-bg);
@@ -409,21 +426,14 @@ body {
   margin: 0 auto;
 }
 
-.card__title {
-  margin: 0 0 0.5rem;
-  font-size: 1.1rem;
-}
-
 .card__body {
   margin: 0 0 0.7rem;
-  font-size: 0.96rem;
-  color: var(--muted);
+  line-height: 1.65;
 }
 
 .card__list {
   margin: 0;
   padding-left: 1.1rem;
-  color: var(--muted);
   font-size: 0.95rem;
 }
 
@@ -448,9 +458,21 @@ body {
   color: var(--muted);
 }
 
-/* ---------------
-   Form Embeds
-   --------------- */
+/* Badge (deadline / important note) */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: var(--parchment);
+  border: 1px solid var(--parchment-border);
+  color: var(--text);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* ---------------------------------------------------------
+   10) Form embeds
+   --------------------------------------------------------- */
 
 .form-embed {
   margin-top: 0.75rem;
@@ -459,15 +481,22 @@ body {
   border: 1px solid var(--card-border);
 }
 
-/* ---------------
-   Our Story – decorative accent
-   --------------- */
+.form-embed iframe {
+  width: 100%;
+  display: block;
+  height: clamp(720px, 85vh, 1100px);
+  border: 0;
+}
 
+/* ---------------------------------------------------------
+   11) Page-specific accents
+   --------------------------------------------------------- */
+
+/* Our Story: decorative band on top of alt section */
 .our-story-page .section--alt {
   position: relative;
 }
 
-/* Soft patterned band at the top of the Our Story intro section */
 .our-story-page .section--alt::before {
   content: "";
   position: absolute;
@@ -483,10 +512,7 @@ body {
   pointer-events: none;
 }
 
-/* ---------------
-   In Loving Memory page
-   --------------- */
-
+/* In Loving Memory page */
 .in-memory-page .section--alt {
   background: radial-gradient(circle at top, #fff7ed, transparent 55%),
     radial-gradient(circle at bottom, #ecfdf5, transparent 55%),
@@ -555,10 +581,7 @@ body {
   margin: 2rem 0 1.25rem;
 }
 
-/* ---------------
-   Family Tree tweaks
-   --------------- */
-
+/* Family Tree tweaks */
 .family-tree-grid .card__title {
   margin-bottom: 0.6rem;
 }
@@ -567,21 +590,17 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* ---------------
-   Family Roots page
-   --------------- */
-
+/* Family Roots page */
 .family-roots-page .family-branch {
   margin-bottom: var(--space-xl);
 }
 
-/* Compact timeline styling at top of each branch */
 .family-roots-page .family-branch > .card__list {
   list-style: none;
   padding-left: 0;
   margin: 0 0 1.5rem;
-  border-left: 3px solid rgba(22, 101, 52, 0.18); /* soft accent green */
-  padding-inline-start: 1.1rem; /* space between border and text */
+  border-left: 3px solid rgba(22, 101, 52, 0.18);
+  padding-inline-start: 1.1rem;
   font-size: 0.95rem;
   color: var(--muted);
 }
@@ -592,7 +611,6 @@ body {
   line-height: 1.4;
 }
 
-/* Little dot for each timeline entry */
 .family-roots-page .family-branch > .card__list li::before {
   content: "";
   position: absolute;
@@ -605,7 +623,6 @@ body {
   opacity: 0.6;
 }
 
-/* “Back to top / Our Story” nav under each section */
 .family-roots-page .family-nav {
   margin-top: 2rem;
   padding-top: 0.75rem;
@@ -626,7 +643,6 @@ body {
   color: var(--accent-warm);
 }
 
-/* Slight tighten on long paragraphs for readability on wide screens */
 .family-roots-page .family-branch p {
   max-width: 48rem;
 }
@@ -650,9 +666,15 @@ body {
   pointer-events: none;
 }
 
-/* ---------------
-   Footer
-   --------------- */
+/* RSVP page accent underline (if you use page-header class) */
+.rsvp-page .page-header .section__title::after,
+.rsvp-page .section__title::after {
+  background: linear-gradient(to right, var(--accent-warm), var(--accent));
+}
+
+/* ---------------------------------------------------------
+   12) Footer
+   --------------------------------------------------------- */
 
 .site-footer {
   padding: var(--space-md) 0 var(--space-lg);
@@ -670,9 +692,9 @@ body {
   font-size: 0.9rem;
 }
 
-/* ---------------
-   Skip link (accessibility)
-   --------------- */
+/* ---------------------------------------------------------
+   13) Skip link (accessibility)
+   --------------------------------------------------------- */
 
 .skip-link {
   position: absolute;
@@ -693,9 +715,9 @@ body {
   transform: translateY(0);
 }
 
-/* ---------------
-   Page headers (top section on inner pages)
-   --------------- */
+/* ---------------------------------------------------------
+   14) Page headers (optional helper class)
+   --------------------------------------------------------- */
 
 .page-header {
   position: relative;
@@ -703,7 +725,6 @@ body {
   padding-bottom: var(--space-lg);
 }
 
-/* Decorative underline on page title */
 .page-header .section__title {
   position: relative;
 }
@@ -719,14 +740,13 @@ body {
   opacity: 0.85;
 }
 
-/* Slightly tighter intro spacing on page headers */
 .page-header .section__intro {
   margin-bottom: var(--space-md);
 }
 
-/* ---------------
-   Responsive
-   --------------- */
+/* ---------------------------------------------------------
+   15) Responsive
+   --------------------------------------------------------- */
 
 @media (max-width: 800px) {
   .hero__inner {
@@ -736,10 +756,6 @@ body {
   .grid--two,
   .grid--three {
     grid-template-columns: minmax(0, 1fr);
-  }
-
-  .site-header__inner {
-    align-items: center;
   }
 
   .nav-toggle {
@@ -769,13 +785,10 @@ body {
     width: 100%;
     padding: 0.45rem 0.3rem;
   }
-}
 
-.form-embed iframe {
-  width: 100%;
-  display: block;
-  height: clamp(720px, 85vh, 1100px);
-  border: 0;
+  .card {
+    padding: 1rem 1.1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -786,96 +799,12 @@ body {
   .hero {
     padding: 2.5rem 0 2rem;
   }
-  .form-embed iframe {
-    height: clamp(680px, 78vh, 950px);
-  }
-}
 
-@media (max-width: 800px) {
-  .card {
-    padding: 1rem 1.1rem;
-  }
-
-  .section__title {
-    font-size: 1.45rem;
-  }
-}
-
-.badge {
-  display: inline-block;
-  padding: 0.25rem 0.6rem;
-  border-radius: 999px;
-  background: var(--parchment);
-  border: 1px solid var(--parchment-border);
-  color: var(--ink);
-  font-weight: 700;
-  font-size: 0.9rem;
-}
-
-a {
-  color: var(--accent);
-}
-
-a:hover {
-  color: var(--accent-warm);
-}
-body {
-  font-size: 16px;
-}
-
-.brand__title {
-  font-size: 1.2rem;
-  font-weight: 750;
-}
-
-.brand__subtitle {
-  font-size: 0.9rem;
-  opacity: 0.9;
-}
-
-.section__title {
-  font-size: clamp(1.6rem, 2.2vw, 2rem);
-  letter-spacing: 0.01em;
-}
-
-.card__title {
-  font-size: 1.15rem;
-}
-
-.card__body {
-  font-size: 1rem;
-  line-height: 1.65;
-}
-@media (max-width: 480px) {
-  body {
-    font-size: 16px;
-  }
   .card__body {
     font-size: 0.98rem;
   }
-}
-.rsvp-page .page-header .section__title::after,
-.rsvp-page .section__title::after {
-  background: linear-gradient(to right, var(--accent-warm), var(--accent));
-}
 
-.section--alt {
-  background: radial-gradient(
-      circle at top left,
-      rgba(22, 101, 52, 0.06),
-      transparent 55%
-    ),
-    radial-gradient(
-      circle at bottom right,
-      rgba(194, 65, 12, 0.06),
-      transparent 55%
-    ),
-    linear-gradient(to bottom, #fdfaf6, var(--paper-alt));
-}
-
-a {
-  color: var(--accent);
-}
-a:hover {
-  color: var(--accent-warm);
+  .form-embed iframe {
+    height: clamp(680px, 78vh, 950px);
+  }
 }
