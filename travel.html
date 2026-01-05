@@ -56,7 +56,7 @@
             >
             <a href="memories.html">Family Memories</a>
             <a href="in-memory.html">In Loving Memory</a>
-            <a href="rsvp.html" class="nav__cta">RSVP</a>
+            <a href="rsvp.html" class="nav__cta">Vote / RSVP</a>
           </nav>
         </div>
       </div>
@@ -186,6 +186,13 @@
         navToggle.addEventListener("click", () => {
           const isOpen = nav.classList.toggle("nav--open");
           navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+
+        nav.addEventListener("click", (e) => {
+          if (e.target.tagName === "A" && nav.classList.contains("nav--open")) {
+            nav.classList.remove("nav--open");
+            navToggle.setAttribute("aria-expanded", "false");
+          }
         });
       }
     </script>
