@@ -171,7 +171,7 @@ a:hover {
   border-color: rgba(15, 23, 42, 0.25);
 }
 
-/* Optional underline style if you ever use nav__link--active */
+/* Optional underline style */
 .nav__link--active {
   color: #fefce8;
   font-weight: 600;
@@ -666,7 +666,7 @@ a:hover {
   pointer-events: none;
 }
 
-/* RSVP page accent underline (if you use page-header class) */
+/* RSVP page accent underline */
 .rsvp-page .page-header .section__title::after,
 .rsvp-page .section__title::after {
   background: linear-gradient(to right, var(--accent-warm), var(--accent));
